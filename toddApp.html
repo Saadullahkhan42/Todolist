@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background: linear-gradient(90deg, rgba(64,64,68,1) 0%, rgba(158,158,166,1) 88%);
+            height: 100vh;
+            width: 100vw;
+             
+        }
+        
+        header{
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 5rem;
+        }
+
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form input, form button{
+            padding: 1rem;
+            border: none;
+            background-color: white;
+            font-size: 1rem;
+        }
+
+        form button{
+            color: slategrey;
+            transition: all 0.5s ease;    
+        }
+
+        form button:hover{
+            background-color: black;
+            color: blanchedalmond;
+        }
+
+        .todo-list{
+            max-width: 500px;
+            margin: 10% auto;
+            list-style: none;
+        }
+
+        .todo{
+            display: flex;
+            justify-content: space-between;
+            min-width: 40%;
+            background-color: blanchedalmond;
+            padding: 0.5rem;
+            margin: 0.5rem;
+            font-size: 2rem;
+            transition: all 1s ease;
+        }
+
+        .todo li{
+            flex: 2;
+        }
+
+        .fa-check,
+        .fa-trash{
+            border: none;
+            padding: 1rem;
+            font-size: 1rem;
+            background-color: rgb(82, 83, 81);
+            color: white;
+            cursor: pointer;
+        }
+
+        .completed{
+            text-decoration: line-through ;
+            opacity: 0.6;
+        }
+
+        .fa-check,
+        .fa-trash{
+            pointer-events: none;
+        }
+
+        .fall{
+            transform: translateY(6rem) rotateZ(20deg);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Todo List</h1>
+    </header>
+
+    <form>
+        <input type="text" class="todo-input">
+        <button type="submit" class="todo-btn">
+            <i class="fal fa-plus-octagon"></i>
+        </button>
+    </form>
+
+    <ul class="todo-list"></ul>
+
+    <script src="./todoApp.js"></script>
+</body>
+</html>
